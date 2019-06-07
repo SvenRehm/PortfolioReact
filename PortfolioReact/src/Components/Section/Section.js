@@ -2,14 +2,14 @@ import React from "react"
 import "./Section.css"
 import picture from "../../images/champion-akali-headhunter-splash.jpg"
 
-export const Section = ({ menu }) => {
+export const Sections = ({ menu }) => {
    return (
       <div
          vs-anchor="view-4"
          className="mainview view-4 page section"
          id="four"
       >
-         <section className="grid">
+         <div className="grid">
             <a
                // className="img-card"
                className={menu ? "img-card img-slideup" : "img-card"}
@@ -30,7 +30,7 @@ export const Section = ({ menu }) => {
                   </a>
                </h2>
             </div>
-         </section>
+         </div>
       </div>
    )
 }

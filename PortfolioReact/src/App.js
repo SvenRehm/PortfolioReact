@@ -3,12 +3,11 @@ import React, { Component } from "react"
 import "./App.css"
 import { Header } from "./Components/Header/Header"
 import { Landing } from "./Components/Landing/Landing"
-import { Section } from "./Components/Section/Section"
+import { Sections } from "./Components/Section/Section"
 import { Footer } from "./Components/Footer/Footer"
 import { Menu } from "./Components/Menu/Menu"
-
 import { Contact } from "./Components/Contact/Contact"
-import ReactPageScroller from "react-page-scroller"
+import { ScrollPage, Section } from "react-scrollpage"
 
 export class App extends Component {
    constructor(props) {
@@ -18,10 +17,6 @@ export class App extends Component {
          menu: false,
          contact: false
       }
-   }
-
-   goToPage = pageNumber => {
-      this.reactPageScroller.goToPage(pageNumber)
    }
 
    toggleMenu = () => {
@@ -39,8 +34,17 @@ export class App extends Component {
    closeMenu = () => {
       this.setState({ menu: false })
    }
+   changePage = number => {
+      window.turnTo(number)
+   }
 
    render() {
+      const options = {
+         curPage: 1, // inital page number, most 1
+         totalPage: 3, // totoal page number
+         // callback function when page changed with curPage specifed
+         delay: 0 // delay between two scoll animation
+      }
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
             <div className="bg-lines hidden">
@@ -53,28 +57,33 @@ export class App extends Component {
             <Menu
                menu={this.state.menu}
                toggleContact={this.toggleContact}
-               goToPage={this.goToPage}
                closeMenu={this.closeMenu}
+               changePage={this.changePage}
             />
             <Contact
                contact={this.state.contact}
                closeContact={this.closeContact}
             />
 
-            {"hello from local"}
-            <ReactPageScroller ref={c => (this.reactPageScroller = c)}>
-               <Landing
-                  goToPage={this.goToPage}
-                  menu={this.state.menu}
-                  toggleContact={this.toggleContact}
-               />
-               <Section menu={this.state.menu} />
-               <Footer
-                  menu={this.state.menu}
-                  toggleContact={this.toggleContact}
-                  goToPage={this.goToPage}
-               />
-            </ReactPageScroller>
+            <ScrollPage {...options}>
+               <Section>
+                  <Landing
+                     menu={this.state.menu}
+                     toggleContact={this.toggleContact}
+                     changePage={this.changePage}
+                  />
+               </Section>
+               <Section>
+                  <Sections menu={this.state.menu} />
+               </Section>
+               <Section>
+                  <Footer
+                     menu={this.state.menu}
+                     toggleContact={this.toggleContact}
+                     changePage={this.changePage}
+                  />
+               </Section>
+            </ScrollPage>
          </div>
       )
    }

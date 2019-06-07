@@ -1,7 +1,7 @@
 import React from "react"
 import "./Menu.css"
 
-export const Menu = ({ menu, toggleContact, goToPage, closeMenu }) => {
+export const Menu = ({ menu, toggleContact, closeMenu, changePage }) => {
    return (
       <div
          // className="menu-overlay"
@@ -11,11 +11,11 @@ export const Menu = ({ menu, toggleContact, goToPage, closeMenu }) => {
             <ul className="menu-list">
                <li className="menu-item-1">
                   <a
-                     href="#view-1"
+                     href="#home"
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        goToPage(0)
+                        changePage(1)
                      }}
                   >
                      Home
@@ -23,11 +23,11 @@ export const Menu = ({ menu, toggleContact, goToPage, closeMenu }) => {
                </li>
                <li className="menu-item-2">
                   <a
-                     href="#view-2"
+                     href="#portfolio"
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        goToPage(1)
+                        changePage(2)
                      }}
                   >
                      Portfolio
@@ -35,11 +35,11 @@ export const Menu = ({ menu, toggleContact, goToPage, closeMenu }) => {
                </li>
                <li className="menu-item-5">
                   <a
-                     href="#view-5"
+                     href="#skills"
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        goToPage(2)
+                        changePage(3)
                      }}
                   >
                      Skills

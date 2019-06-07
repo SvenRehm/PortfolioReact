@@ -1,7 +1,7 @@
 import React from "react"
 import "./Landing.css"
 
-export const Landing = ({ goToPage, menu, contact, toggleContact }) => {
+export const Landing = ({ menu, contact, toggleContact, changePage }) => {
    return (
       <div
          // className="landing"
@@ -20,9 +20,9 @@ export const Landing = ({ goToPage, menu, contact, toggleContact }) => {
             <div className="call-to-action">
                <a
                   className="btn btn-portfolio vs-anchor"
-                  href="#work"
+                  href="#portfolio"
                   onClick={() => {
-                     goToPage(1)
+                     changePage(2)
                   }}
                >
                   My Work
@@ -39,9 +39,9 @@ export const Landing = ({ goToPage, menu, contact, toggleContact }) => {
                </a>
                <a
                   className="landing-down-arrow vs-anchor"
-                  href="#work"
+                  href="#portfolio"
                   onClick={() => {
-                     goToPage(1)
+                     changePage(2)
                   }}
                >
                   <svg

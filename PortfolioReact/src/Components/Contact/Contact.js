@@ -4,7 +4,7 @@ import "./Contact.css"
 export const Contact = ({contact, closeContact}) => {
    return (
 
-    <section className="contact-modal">
+    <div className="contact-modal">
     <div 
     // className="contact-left"
     className={contact ? "contact-left is-open" : "contact-left"}
@@ -100,7 +100,7 @@ export const Contact = ({contact, closeContact}) => {
     </div>
   </div>
    
-  </section>
+  </div>
 
    )
 }

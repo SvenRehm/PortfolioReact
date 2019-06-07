@@ -1,7 +1,7 @@
 import React from "react"
 import "./Footer.css"
 
-export const Footer = ({ menu, toggleContact, goToPage }) => {
+export const Footer = ({ menu, toggleContact, changePage }) => {
    return (
       <div
          vs-anchor="view-5"
@@ -13,7 +13,7 @@ export const Footer = ({ menu, toggleContact, goToPage }) => {
             className="uparrow vs-anchor"
             href="#view-1"
             onClick={() => {
-               goToPage(0)
+               changePage(1)
             }}
          >
             <svg
