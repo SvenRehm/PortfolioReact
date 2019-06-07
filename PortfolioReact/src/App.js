@@ -60,6 +60,8 @@ export class App extends Component {
                contact={this.state.contact}
                closeContact={this.closeContact}
             />
+
+            {"hello from local"}
             <ReactPageScroller ref={c => (this.reactPageScroller = c)}>
                <Landing
                   goToPage={this.goToPage}
