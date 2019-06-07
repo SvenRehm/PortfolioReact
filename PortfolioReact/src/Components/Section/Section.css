@@ -1,0 +1,110 @@
+.grid {
+   display: grid;
+   height: 100vh;
+   grid-template-rows: repeat(12, minmax(0, 1fr));
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+   opacity: 1;
+   position: relative;
+   justify-items: center;
+   align-items: end;
+}
+.grid::selection {
+   color: #383838;
+   background: white;
+}
+.grid .portfolio-heading {
+   grid-column: 3 / span 8;
+   grid-row: 2 / span 2;
+   margin-bottom: 5%;
+   font-size: 2.1em;
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   transition: all 350ms ease-in-out;
+}
+.grid .portfolio-heading.img-slideup {
+   display: none;
+}
+.grid .img-card-text {
+   position: absolute;
+   top: 63%;
+   font-family: "Roboto", sans-serif;
+   z-index: 6;
+   text-align: center;
+   animation-name: imgSlideUponload;
+   animation-duration: 500ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.grid .img-card-text.img-slideup {
+   animation-name: imgSlideUp;
+   animation-duration: 500ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.grid .img-card-text a {
+   text-decoration: none;
+   color: white;
+   font-size: 2em;
+   opacity: 1;
+}
+.grid .img-card-text a::selection {
+   color: #383838;
+   background: white;
+}
+.grid .img-card-text a.desctiption-link {
+   display: block;
+   margin-top: 0.7em;
+   font-weight: 100;
+   font-size: 1em;
+   color: rgba(255, 255, 255, 0.4);
+}
+.grid .img-card {
+   justify-content: center;
+   grid-column: 3 / span 8;
+   grid-row: 4 / span 7;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   z-index: 5;
+   opacity: 1;
+   animation-name: imgSlideUponload;
+   animation-duration: 500ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+   box-shadow: 0px 33px 40px -15px #272727;
+}
+.grid .img-card.img-slideup {
+   animation-name: imgSlideUp;
+   animation-duration: 500ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.grid .img-card img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   transition: all 200ms ease-in-out;
+}
+@keyframes imgSlideUp {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(-50%);
+      opacity: 0;
+   }
+}
+@keyframes imgSlideUponload {
+   0% {
+      transform: translateY(30%);
+      opacity: 0;
+   }
+   50% {
+      opacity: 0.2;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
