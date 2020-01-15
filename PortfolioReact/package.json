@@ -6,6 +6,7 @@
       "jquery": "^3.4.1",
       "react": "^16.8.6",
       "react-dom": "^16.8.6",
+      "react-image-lightbox": "^5.1.0",
       "react-onepage": "^1.1.0",
       "react-page-scroller": "^1.5.1",
       "react-scripts": "3.0.1",

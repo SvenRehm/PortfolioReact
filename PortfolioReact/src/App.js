@@ -8,6 +8,7 @@ import { Footer } from "./Components/Footer/Footer"
 import { Menu } from "./Components/Menu/Menu"
 import { Contact } from "./Components/Contact/Contact"
 import { ScrollPage, Section } from "react-scrollpage"
+import "react-image-lightbox/style.css"
 
 export class App extends Component {
    constructor(props) {
@@ -41,7 +42,7 @@ export class App extends Component {
    render() {
       const options = {
          curPage: 1, // inital page number, most 1
-         totalPage: 3, // totoal page number
+         totalPage: 4, // totoal page number
          // callback function when page changed with curPage specifed
          delay: 0 // delay between two scoll animation
       }
@@ -72,6 +73,9 @@ export class App extends Component {
                      toggleContact={this.toggleContact}
                      changePage={this.changePage}
                   />
+               </Section>
+               <Section>
+                  <Sections menu={this.state.menu} />
                </Section>
                <Section>
                   <Sections menu={this.state.menu} />
