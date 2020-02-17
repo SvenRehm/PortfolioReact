@@ -39,7 +39,7 @@ export const Menu = ({ menu, toggleContact, closeMenu, changePage }) => {
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        changePage(3)
+                        changePage(4)
                      }}
                   >
                      Skills
