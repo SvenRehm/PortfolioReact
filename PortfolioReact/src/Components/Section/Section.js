@@ -2,30 +2,14 @@
 import React, { Component } from "react"
 import "./Section.css"
 import picture from "../../images/champion-akali-headhunter-splash.jpg"
-import image from "../../images/xan-griffin-420173-unsplash.jpg"
-import image2 from "../../images/animelist.png"
-import Lightbox from "react-image-lightbox"
-
-const images = [
-   image,
-   image2,
-   "//placekitten.com/800/1200",
-   "//placekitten.com/1500/1500"
-]
 
 export class Sections extends Component {
-   constructor(props) {
-      super(props)
-
-      this.state = {
-         photoIndex: 0,
-         isOpen: false
-      }
-   }
-
    render() {
-      const { menu } = this.props
-      const { photoIndex, isOpen } = this.state
+      const { menu, headline, paragraph1 } = this.props
+
+      const { skills = [] } = this.props
+
+      const allskills = skills.map((item, key) => <li key={3}>{item}</li>)
       return (
          <div>
             <div
@@ -34,7 +18,7 @@ export class Sections extends Component {
                id="four"
             >
                <div className="grid">
-                  <a
+                  <div
                      // className="img-card"
                      className={menu ? "img-card img-slideup" : "img-card"}
                      href="/"
@@ -43,47 +27,44 @@ export class Sections extends Component {
                         this.setState({ isOpen: true })
                      }}
                   >
-                     <img src={picture} alt="sectionpicture" />
-                  </a>
-                  <div
-                     // className="img-card-text"
-                     className={
-                        menu ? "img-card-text img-slideup" : "img-card-text"
-                     }
-                  >
-                     <h1>
-                        <a href="/">Headline</a>
-                     </h1>
-                     <h2>
-                        <a className="desctiption-link" href="/">
-                           Descriptionhfddfhdfg
-                        </a>
-                     </h2>
+                     <button className="viewdemo">
+                        <a href="/">View Demo</a>
+                     </button>
+                     <button className="viewcode">View Code</button>
+                     <img alt={"projectimage"} src={picture}></img>
+                     <div className="content "></div>
+                     <h4>Skills Used</h4>
+                     <ul>
+                        {/* <li>HTML/CSS</li>
+                        <li>REACT</li>
+                        <li>REDUX</li>
+                        <li>POSGRESQL</li> */}
+                        {allskills}
+                     </ul>
+                     <div
+                        className={
+                           menu ? "img-card-text img-slideup" : "img-card-text"
+                        }
+                     >
+                        <h1>{headline}</h1>
+                        <h3 className="desctiption-link">
+                           Something desriptive
+                        </h3>
+                        <h2>What I have Learned</h2>
+                        <p>{paragraph1}</p>
+                        <p>
+                           Lorem ipsum dolor sit amet, consetetur sadipscing
+                           elitr, sed diam nonumy eirmod tempor invidunt ut
+                           labore et dolore magna aliquyam erat, sed diam
+                           voluptua. At vero eos et accusam et justo duo dolores
+                           et ea rebum. Stet clita kasd gubergren, no sea
+                           takimata sanctus est Lorem ipsum dolor sit amet.
+                           Lorem ipsum dolor sit amet, consetetur sadipscing
+                        </p>
+                     </div>
                   </div>
                </div>
             </div>
-
-            {isOpen && (
-               <Lightbox
-                  mainSrc={images[photoIndex]}
-                  nextSrc={images[(photoIndex + 1) % images.length]}
-                  prevSrc={
-                     images[(photoIndex + images.length - 1) % images.length]
-                  }
-                  onCloseRequest={() => this.setState({ isOpen: false })}
-                  onMovePrevRequest={() =>
-                     this.setState({
-                        photoIndex:
-                           (photoIndex + images.length - 1) % images.length
-                     })
-                  }
-                  onMoveNextRequest={() =>
-                     this.setState({
-                        photoIndex: (photoIndex + 1) % images.length
-                     })
-                  }
-               />
-            )}
          </div>
       )
    }

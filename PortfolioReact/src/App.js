@@ -46,6 +46,19 @@ export class App extends Component {
          // callback function when page changed with curPage specifed
          delay: 0 // delay between two scoll animation
       }
+
+      const firstSection = {
+         headline: "MyAnimeList",
+         paragraph1: "Something Really good written",
+         skills: ["HTML/CSS", "REACT", "REDUX", "POSTGRESSQL"]
+      }
+
+      const secondSection = {
+         headline: "MyAnimeList",
+         paragraph1: "Something Really good written",
+         skills: ["HTML/CSS", "REACT", "REDUX", "POSTGRESSQL"]
+      }
+
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
             <div className="bg-lines hidden">
@@ -65,7 +78,6 @@ export class App extends Component {
                contact={this.state.contact}
                closeContact={this.closeContact}
             />
-
             <ScrollPage {...options}>
                <Section>
                   <Landing
@@ -75,10 +87,18 @@ export class App extends Component {
                   />
                </Section>
                <Section>
-                  <Sections menu={this.state.menu} />
+                  <Sections
+                     menu={this.state.menu}
+                     headline={firstSection.headline}
+                     paragraph1={firstSection.paragraph1}
+                     skills={firstSection.skills}
+                  />
                </Section>
                <Section>
-                  <Sections menu={this.state.menu} />
+                  <Sections
+                     menu={this.state.menu}
+                     skills={secondSection.skills}
+                  />
                </Section>
                <Section>
                   <Footer
