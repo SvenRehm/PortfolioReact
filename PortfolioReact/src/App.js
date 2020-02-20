@@ -9,6 +9,8 @@ import { Menu } from "./Components/Menu/Menu"
 import { Contact } from "./Components/Contact/Contact"
 import { ScrollPage, Section } from "react-scrollpage"
 import "react-image-lightbox/style.css"
+import { firstSection } from "./content"
+import { secondSection } from "./content"
 
 export class App extends Component {
    constructor(props) {
@@ -47,30 +49,24 @@ export class App extends Component {
          delay: 0 // delay between two scoll animation
       }
 
-      const firstSection = {
-         demolink: "https://myanimelist.herokuapp.com",
-         codelink: "https://github.com/SvenRehm/Anime-Api-Practice-Project",
-         headline: "MyAnimeList",
-         description:
-            "Animelibrary in der man eine liste der Animes die man ansehen will erstellen kann",
-         paragraph1: "Something Really good written",
-         bullets: [
-            "Focus und Ziel der Web App war es Redux zu lernen und das verständniss von React zu vertiefen",
-            "Entwurf des UX/UI Designs in AdobeXD und Implementierung mit React/ReactRouter/Redux",
-            "Benutzte Kitsu Api Datenbank und diese mit Postman getestet",
-            "Entwicklung des Backends(Node) für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank in PostgreSQL wo weitere information zu der watchlist gespeichert werden",
-            "Implementierte JSON web token für Authentifikation das im Lokalen Speicher gespeichert wird",
-            "Hosting des Frontends und Backends auf Heroku durchgeführt"
-         ],
+      // const firstSection = {
+      //    demolink: "https://myanimelist.herokuapp.com",
+      //    codelink: "https://github.com/SvenRehm/Anime-Api-Practice-Project",
+      //    headline: "MyAnimeList",
+      //    description:
+      //       "Animelibrary in der man eine liste der Animes die man ansehen will erstellen kann",
+      //    paragraph1: "Something Really good written",
+      //    bullets: [
+      //       "Focus und Ziel der Web App war es Redux zu lernen und das verständniss von React zu vertiefen",
+      //       "Entwurf des UX/UI Designs in AdobeXD und Implementierung mit React/ReactRouter/Redux",
+      //       "Benutzte Kitsu Api Datenbank und diese mit Postman getestet",
+      //       "Entwicklung des Backends(Node) für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank in PostgreSQL wo weitere information zu der watchlist gespeichert werden",
+      //       "Implementierte JSON web token für Authentifikation das im Lokalen Speicher gespeichert wird",
+      //       "Hosting des Frontends und Backends auf Heroku durchgeführt"
+      //    ],
 
-         skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"]
-      }
-
-      const secondSection = {
-         headline: "MyAnimeList",
-         paragraph1: "Something Really good written",
-         skills: ["HTML/CSS", "REACT", "REDUX", "POSTGRESSQL"]
-      }
+      //    skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"]
+      // }
 
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
