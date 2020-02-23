@@ -1,7 +1,13 @@
 import React from "react"
 import "./Menu.css"
 
-export const Menu = ({ menu, toggleContact, closeMenu, changePage }) => {
+export const Menu = ({
+   menu,
+   toggleContact,
+   closeMenu,
+
+   goToPage
+}) => {
    return (
       <div
          // className="menu-overlay"
@@ -15,7 +21,8 @@ export const Menu = ({ menu, toggleContact, closeMenu, changePage }) => {
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        changePage(1)
+
+                        goToPage(0)
                      }}
                   >
                      Home
@@ -27,7 +34,7 @@ export const Menu = ({ menu, toggleContact, closeMenu, changePage }) => {
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        changePage(2)
+                        goToPage(1)
                      }}
                   >
                      Portfolio
@@ -39,7 +46,7 @@ export const Menu = ({ menu, toggleContact, closeMenu, changePage }) => {
                      className="vs-anchor"
                      onClick={() => {
                         closeMenu()
-                        changePage(4)
+                        goToPage(3)
                      }}
                   >
                      Skills

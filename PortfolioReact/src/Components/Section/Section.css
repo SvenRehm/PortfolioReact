@@ -56,7 +56,8 @@
    color: rgb(219, 219, 219);
    font-size: 1.5em;
    opacity: 1;
-   margin: 0;
+   margin: 0 0 0 0;
+
    text-align: start;
 }
 .grid .img-card-text a::selection {
@@ -66,6 +67,7 @@
 .grid .img-card-text h3.desctiption-link {
    display: block;
    margin-top: 0.7em;
+   margin-bottom: 3em;
    font-weight: 100;
    font-size: 1em;
    text-align: start;
@@ -173,25 +175,30 @@
 .grid h4 {
    position: absolute;
    margin: 0;
-   right: 10px;
+   right: 0;
    top: 110px;
    text-decoration: none;
    color: rgb(219, 219, 219);
    font-size: 1.5em;
    opacity: 1;
-   width: 200px;
+   width: 180px;
    text-align: center;
 }
 
 .grid .skills {
    position: absolute;
    list-style-type: none;
-   margin: 0;
    padding: 0;
    text-align: center;
-   width: 200px;
+   /* width: 200px;
    right: 10px;
-   top: 200px;
+   top: 200px; */
+   width: 180px;
+   height: 100%;
+   top: 30px;
+   right: 0;
+   top: 35%;
+   margin: 0;
    text-decoration: none;
    color: rgb(219, 219, 219);
    font-size: 1em;
@@ -199,7 +206,8 @@
 }
 
 .grid .projectBulllets {
-   margin: 30px 0 0 0;
+   margin: 40px 0 0 0;
+   padding-right: 10px;
    list-style: square;
    padding-left: 15px;
    width: 500px;
