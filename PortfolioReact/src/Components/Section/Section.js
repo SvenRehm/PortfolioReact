@@ -12,7 +12,6 @@ export class Sections extends Component {
       const {
          menu,
          headline,
-
          description,
          skills = [],
          bullets = [],
