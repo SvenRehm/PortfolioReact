@@ -8,8 +8,7 @@ import { Footer } from "./Components/Footer/Footer"
 import { Menu } from "./Components/Menu/Menu"
 import { Contact } from "./Components/Contact/Contact"
 import "react-image-lightbox/style.css"
-import { firstSection } from "./content"
-import { secondSection } from "./content"
+import { firstSection, secondSection } from "./Components/Content/content"
 
 import ReactPageScroller from "react-page-scroller"
 
@@ -81,6 +80,7 @@ export class App extends Component {
 
                <Sections
                   menu={this.state.menu}
+                  picture={firstSection.picture}
                   headline={firstSection.headline}
                   description={firstSection.description}
                   bullets={firstSection.bullets}

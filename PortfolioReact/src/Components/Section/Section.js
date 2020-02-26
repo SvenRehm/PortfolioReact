@@ -1,7 +1,7 @@
 // import React from "react"
 import React, { Component } from "react"
 import "./Section.css"
-import picture from "../../images/champion-akali-headhunter-splash.jpg"
+// import picture from "../../images/champion-akali-headhunter-splash.jpg"
 
 export class Sections extends Component {
    link = () => {
@@ -16,7 +16,8 @@ export class Sections extends Component {
          skills = [],
          bullets = [],
          codelink,
-         demolink
+         demolink,
+         picture
       } = this.props
 
       const allskills = skills.map((item, key) => <li key={key}>{item}</li>)
@@ -24,6 +25,7 @@ export class Sections extends Component {
          <li key={key}>{item}</li>
       ))
 
+      console.log(picture)
       return (
          <div>
             <div
@@ -57,7 +59,7 @@ export class Sections extends Component {
                         View COde
                      </a>
 
-                     <img alt={"projectimage"} src={picture}></img>
+                     <img alt={"projectimage"} src={picture} />
                      <div className="content "></div>
                      <h4>Skills Used</h4>
                      <ul className="skills">{allskills}</ul>

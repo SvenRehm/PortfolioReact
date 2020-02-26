@@ -1,3 +1,5 @@
+import picture from "../../images/thumbnail/project1.jpg"
+
 export const firstSection = {
    demolink: "https://myanimelist.herokuapp.com",
    codelink: "https://github.com/SvenRehm/Anime-Api-Practice-Project",
@@ -14,7 +16,9 @@ export const firstSection = {
       "Hosting des Frontends und Backends auf Heroku durchgeführt"
    ],
 
-   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"]
+   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"],
+   // picture: "./images/SharedScreenshot.jpg"
+   picture: picture
 }
 
 export const secondSection = {
