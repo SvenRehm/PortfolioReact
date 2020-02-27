@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/PortfolioReact/static/css/main.0940b58e.chunk.css",
-    "main.js": "/PortfolioReact/static/js/main.5dbb82d7.chunk.js",
-    "main.js.map": "/PortfolioReact/static/js/main.5dbb82d7.chunk.js.map",
-    "runtime~main.js": "/PortfolioReact/static/js/runtime~main.843980ec.js",
-    "runtime~main.js.map": "/PortfolioReact/static/js/runtime~main.843980ec.js.map",
-    "static/css/2.9522b9fe.chunk.css": "/PortfolioReact/static/css/2.9522b9fe.chunk.css",
-    "static/js/2.b634f6a2.chunk.js": "/PortfolioReact/static/js/2.b634f6a2.chunk.js",
-    "static/js/2.b634f6a2.chunk.js.map": "/PortfolioReact/static/js/2.b634f6a2.chunk.js.map",
-    "index.html": "/PortfolioReact/index.html",
-    "precache-manifest.658958f77b06e113306f1b03fa02aa44.js": "/PortfolioReact/precache-manifest.658958f77b06e113306f1b03fa02aa44.js",
-    "service-worker.js": "/PortfolioReact/service-worker.js",
-    "static/css/2.9522b9fe.chunk.css.map": "/PortfolioReact/static/css/2.9522b9fe.chunk.css.map",
-    "static/css/main.0940b58e.chunk.css.map": "/PortfolioReact/static/css/main.0940b58e.chunk.css.map",
-    "static/media/project1.jpg": "/PortfolioReact/static/media/project1.5725812b.jpg"
+    "main.css": "/portfolioreact/static/css/main.0940b58e.chunk.css",
+    "main.js": "/portfolioreact/static/js/main.b3de54c6.chunk.js",
+    "main.js.map": "/portfolioreact/static/js/main.b3de54c6.chunk.js.map",
+    "runtime~main.js": "/portfolioreact/static/js/runtime~main.aa6db17b.js",
+    "runtime~main.js.map": "/portfolioreact/static/js/runtime~main.aa6db17b.js.map",
+    "static/css/2.9522b9fe.chunk.css": "/portfolioreact/static/css/2.9522b9fe.chunk.css",
+    "static/js/2.b634f6a2.chunk.js": "/portfolioreact/static/js/2.b634f6a2.chunk.js",
+    "static/js/2.b634f6a2.chunk.js.map": "/portfolioreact/static/js/2.b634f6a2.chunk.js.map",
+    "index.html": "/portfolioreact/index.html",
+    "precache-manifest.0a642d1f88dd6e3a12288372bb4589ff.js": "/portfolioreact/precache-manifest.0a642d1f88dd6e3a12288372bb4589ff.js",
+    "service-worker.js": "/portfolioreact/service-worker.js",
+    "static/css/2.9522b9fe.chunk.css.map": "/portfolioreact/static/css/2.9522b9fe.chunk.css.map",
+    "static/css/main.0940b58e.chunk.css.map": "/portfolioreact/static/css/main.0940b58e.chunk.css.map",
+    "static/media/project1.jpg": "/portfolioreact/static/media/project1.5725812b.jpg"
   }
 }
